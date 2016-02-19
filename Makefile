@@ -1,10 +1,10 @@
 CXXFLAGS += -std=c++14 -pedantic -Wall -O3
-LDFLAGS += -I../Shared -Iheader
+LDFLAGS += -Iheader
 LIBFLAGS = -shared -fPIC
 TARGET = bin/ga
 LIB_TARGET = bin/libga.so
 
-CPP = $(wildcard *.cpp) $(wildcard ../json/*.cpp)
+CPP = $(wildcard *.cpp)
 OBJ = $(CPP:.cpp=.o)
 
 all : $(OBJ)
